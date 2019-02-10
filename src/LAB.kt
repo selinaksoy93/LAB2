@@ -29,9 +29,14 @@ fun main (){
     println(concatenate(userName, userSurName))
 
     println(" ${calcGPA(vizeNotu!!.toDouble(), finalNotu!!.toDouble())}")
+
+    println(" ${vizeNotu.toDouble().notHesapla(finalNotu.toDouble())}")
+
 }
 
 
 fun calcGPA (vize:Double , final:Double) : Double =(vize * .4) + (final * .6)
 
 fun concatenate(s1:String?, s2:String?): String = "$s1 + $s2"
+
+infix fun Double.notHesapla(final: Double): Double = this + (final * .6)
