@@ -12,3 +12,22 @@
 // TODO(3) Kullanıcıdan vize notunu alın.
 // TODO(4) Kullanıcıdan final notunu alın.
 // TODO(5) Vize'nin %40'ını Final'in %60'ını alan ve geciş notunu print eden bir infix-extention method yazınız.
+
+fun main(args: Array<String>) {
+    print("Kullanici Adi Giriniz: ")
+    val userName = readLine()
+
+    print("Kullanici Soyadi Giriniz: ")
+    val userSurname = readLine()
+
+    print("Kullanici Vize Notu Giriniz: ")
+    val notVize = readLine()!!
+
+    print("Kullanici Final Notu Giriniz: ")
+    val notFinal = readLine()!!
+
+    val result: Int = ((notVize.toInt() * 0.4) + (notFinal.toInt() * 0.6)).toInt()
+    print("Sonuc :" printResult (result))
+}
+
+infix fun String.printResult(result: Int): String = "$this $result"
