@@ -26,7 +26,7 @@ fun main() {
     print("Kullanıcı final notu:")
     val finalScore: Double = readLine()!!.toDouble()
 
-    print(userName?.extName((((userSurname!!)))))
+    print(userName?.extName(userSurname!!))
     print(vizeScore extCalculator (finalScore))
 
 
