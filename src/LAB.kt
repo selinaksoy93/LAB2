@@ -26,8 +26,10 @@ fun main(args: Array<String>) {
     print("Kullanici Final Notu Giriniz: ")
     val notFinal = readLine()!!
 
-    val result: Int = ((notVize.toInt() * 0.4) + (notFinal.toInt() * 0.6)).toInt()
-    print("Sonuc :" printResult (result))
+    print(notVize.toInt() printResult (notFinal.toInt()))
 }
 
-infix fun String.printResult(result: Int): String = "$this $result"
+infix fun Int.printResult(notFinal: Int): String {
+    val result = (this * 0.4) + (notFinal * 0.6)
+    return result.toString()
+}
