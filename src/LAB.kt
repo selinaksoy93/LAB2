@@ -13,7 +13,6 @@ fun main(args: Array<String>) {
     print("Adınızı giriniz: ")
     val userName = readLine()
 
-
     // TODO(2) Kullanıcıdan soyadını alın.
     print("Soyadınızı giriniz: ")
     val userSurname = readLine()
