@@ -2,7 +2,7 @@
 //┌─────────────────────────────┐
 //│ Created by Gökhan ÖZTÜRK    │
 //│ ─────────────────────────── │
-//│ GokhanOzturk@AndroidEdu.IO  │            
+//│ GokhanOzturk@AndroidEdu.IO  │
 //│ ─────────────────────────── │
 //│ 2019-02-10 - 13:14          │
 //└─────────────────────────────┘
@@ -17,18 +17,20 @@ fun main() {
     print("Adınızı yazınız")
     var name = readLine()
 
-    print("Soyadınızı yazın")
+    print("Soyadınızı yazınız")
     var surname = readLine()
 
-    print("Vize notunuzu yazın")
+    print("Vize notunuzu giriniz")
     var midTerm = readLine()
 
     print("Final notunuzu giriniz")
     var final = readLine()
 
+    print(midTerm!!.toInt() gradeCalculate final!!.toInt())
 
 }
 
-infix fun Int.extCalculate(final: Int): Int {
-    val mid
+infix fun Int.gradeCalculate(final: Int) {
+    val grade = (this * 0.4 + final * 0.6)
+    print("Geçme notunuz: $grade ")
 }
