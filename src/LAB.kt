@@ -7,19 +7,31 @@
 //│ 2019-02-10 - 13:14          │
 //└─────────────────────────────┘
 
-// TODO(1) Kullanıcıdan adını alın.
-// TODO(2) Kullanıcıdan soyadını alın.
-// TODO(3) Kullanıcıdan vize notunu alın.
-// TODO(4) Kullanıcıdan final notunu alın.
-// TODO(5) Vize'nin %40'ını Final'in %60'ını alan ve geciş notunu print eden bir infix-extention method yazınız.
 fun main() {
 
-    val userName : String? = readLine()
-    val userSurname : String? = readLine()
-    val vizePoint: String? = readLine()
-    val finalPOint: String? = readLine()
+    print("Enter first name:")
+    val firstName = readLine()
 
+    print("Enter last name:")
+    val lastName = readLine()
 
+    print("Enter midterm grade:")
+    val midtermGrade = readLine()
 
+    print("Enter final grade:")
+    val finalGrade = readLine()
 
+    println(midtermGrade!!.toInt() findAverage (finalGrade!!.toInt()))
+}
+
+infix fun Int.findAverage(finalGrade: Int): String {
+    val average = (this * 40 / 100 + finalGrade * 60 / 100)
+    return when (average) {
+        in 90..100 -> "Your final grade:$average Note:AA"
+        in 80..89 -> "Your final grade:$average Note:BB"
+        in 70..79 -> "Your final grade:$average Note:CC"
+        in 60..69 -> "Your final grade:$average Note:DD"
+        in 50..59 -> "Your final grade:$average Note:EE"
+        else -> "You have failed"
+    }
 }
