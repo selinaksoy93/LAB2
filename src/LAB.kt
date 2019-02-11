@@ -16,7 +16,7 @@
 fun main() {
 
     print("Enter your name: ")
-    val userName:String = readLine()!!
+    val userName: String = readLine()!!
 
     print("Enter your surname: ")
     val userSurname: String = readLine()!!
@@ -29,12 +29,12 @@ fun main() {
 
     val averageScore = midtermScore calculator finalScore
 
-    println(userName + " "+ userSurname + " midterm: $midtermScore" + "  final: $finalScore")
+    println(userName + " " + userSurname + " midterm: $midtermScore" + "  final: $finalScore")
 
     println("Your average score is $averageScore")
 
 }
 
-infix fun Double.calculator(score :Double): Double = ((this * 0.40) + (score* 0.60))
+infix fun Double.calculator(score: Double): Double = ((this * 0.40) + (score * 0.60))
 
 
