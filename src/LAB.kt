@@ -12,3 +12,23 @@
 // TODO(3) Kullanıcıdan vize notunu alın.
 // TODO(4) Kullanıcıdan final notunu alın.
 // TODO(5) Vize'nin %40'ını Final'in %60'ını alan ve geciş notunu print eden bir infix-extention method yazınız.
+
+fun main() {
+
+    print("Enter Username: ")
+    val username = readLine()
+    print("Enter Surname: ")
+    val surName = readLine()
+    print("Enter Midterm Grade: ")
+    val midtermGrade = readLine()
+    print("Enter Final Grade: ")
+    val finalGrade = readLine()
+
+    println(midtermGrade!!.toInt() findAverage finalGrade!!.toInt())
+
+}
+
+infix fun Int.findAverage(finalGrade: Int) {
+    val average = ((this * 0.4) + (finalGrade * 0.6))
+    println("Find Average = $average")
+}
