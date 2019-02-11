@@ -30,5 +30,6 @@ fun main() {
 
 infix fun Int.findAverage(finalGrade: Int) {
     val average = ((this * 0.4) + (finalGrade * 0.6))
+
     println("Find Average = $average")
 }
