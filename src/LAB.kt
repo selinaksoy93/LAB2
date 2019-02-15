@@ -29,10 +29,12 @@ fun main() {
         if (vize in 0..100 && final in 0..100) {
             println("$isim $soyIsim ${vize extOrtalama final}")
         }else throw Exception()
+
     }catch(e: Exception) {
         println("Yanlis bilgi girisi yaptiniz!\nBilgileri dogru bir sekilde tekrar girin...")
         return main()
-    }}
+    }
+}
 
 infix fun Int.extOrtalama(final:Int): String{
     return "Ortalama: ${this * 0.4 + final * 0.6}"
